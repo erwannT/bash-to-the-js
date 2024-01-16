@@ -1,0 +1,17 @@
+name: bsh2js
+help: Bash2JS deployment cli
+version: 0.1.0
+
+commands:
+  - name: deploy
+    alias: d
+    help: deploy bash2js demo app
+    examples:
+      - bash2js deploy
+      - bash2js d
+  - name: undeploy
+    alias: u
+    help: destroy bash2js demo app
+    examples:
+      - bash2js undeploy
+      - bash2js u

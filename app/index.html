@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meetup RennesJS - Bash2JS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        background-color: #f6f7f8;
+        margin: 0;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        background-color: white;
+        padding: 0.2rem 0.5rem;
+        box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+        font-size: 0.8rem;
+      }
+      header img {
+        height: 4rem;
+      }
+      article {
+        display: flex;
+        flex-direction: column;
+        margin: 0 20rem;
+      }
+      article img {
+        border-radius: 2rem;
+      }
+      .speakers {
+        display: flex;
+        justify-content: flex-end;
+        gap: 2rem;
+      }
+      .speaker {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        font-weight: bold;
+        font-size: 1rem;
+        text-align: center;
+      }
+      .speaker img {
+        height: 6rem;
+        border-radius: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img
+        src="data:image/png;base64,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"
+        alt="RennesJS"
+      />
+      <h1>Meetup RennesJS</h1>
+    </header>
+  </body>
+</html>
