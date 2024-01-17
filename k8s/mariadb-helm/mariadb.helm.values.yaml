@@ -15,14 +15,14 @@ auth:
   ## @param mariadb.auth.database Database name to create
   ## ref: https://github.com/bitnami/containers/blob/main/bitnami/mariadb/README.md#creating-a-database-on-first-run
   ##
-  database: bitnami_phpbb
+  database: bash2js
   ## @param mariadb.auth.username Database user to create
   ## ref: https://github.com/bitnami/containers/blob/main/bitnami/mariadb/README.md#creating-a-database-user-on-first-run
   ##
-  username: bn_phpbb
+  username: bash2js
   ## @param mariadb.auth.password Password for the database
   ##
-  password: "bn_phpbb"
+  password: "passW0RD"
 primary:
   ## Enable persistence using Persistent Volume Claims
   ## ref: https://kubernetes.io/docs/user-guide/persistent-volumes/
