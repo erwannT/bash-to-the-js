@@ -80,3 +80,9 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+secrets:
+  DB_HOSTNAME: "12"
+  DB_USER: "25"
+  DB_NAME: ""
+  DB_PASSWORD: ""

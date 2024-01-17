@@ -5,12 +5,12 @@ import {SecretsManager} from "@aws-sdk/client-secrets-manager";
 import {fromIni} from "@aws-sdk/credential-providers";
 
 
- const loadSecrets = async (secretId: string) => {
+const loadSecrets = async (secretId: string) => {
     const client = new SecretsManager(
         {
-            credentials:  fromIni()
+            credentials: fromIni()
         });
-    return await client.getSecretValue({
+    return  client.getSecretValue({
             SecretId: secretId
         }
     )
@@ -45,16 +45,13 @@ export class SimpleAppChart extends Chart {
 }
 
 (async () => {
-    try {
-        const secrets = await loadSecrets("template-deployment")
 
-        const app = new App();
-        new SimpleAppChart(app, 'cdk8s');
-        app.synth();
-    } catch (e) {
-        // Deal with the fact the chain failed
-    }
-    // `text` is not available here
+    const secrets = await loadSecrets("template-deployment")
+
+    const app = new App();
+    new SimpleAppChart(app, 'cdk8s');
+    app.synth();
+
 })();
 
 

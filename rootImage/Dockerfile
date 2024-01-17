@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM denoland/deno:ubuntu
 
 ARG AWS_ACCESS_KEY_ID_TEMP
 ARG AWS_SECRET_ACCESS_KEY_TEMP
