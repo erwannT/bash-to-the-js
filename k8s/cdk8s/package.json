@@ -18,7 +18,9 @@
   "dependencies": {
     "cdk8s": "^2.68.25",
     "cdk8s-plus-25": "^2.22.69",
-    "constructs": "^10.3.0"
+    "constructs": "^10.3.0",
+    "@aws-sdk/client-secrets-manager": "^3.350.0",
+    "@aws-sdk/credential-providers": "^3.350.0"
   },
   "devDependencies": {
     "cdk8s-cli": "^2.198.30",
